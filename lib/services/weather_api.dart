@@ -7,11 +7,8 @@ class WeatherApi {
   static const String _baseUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
   static Future<Weather> fetchWeather(String city) async {
-  final url = '$_baseUrl?q=$city&units=metric&appid=$_apiKey';
-  try {
+    final url = '$_baseUrl?q=$city&units=metric&appid=$_apiKey';
     final response = await http.get(Uri.parse(url));
-    print("Response status: ${response.statusCode}");
-    print("Response body: ${response.body}");
 
     if (response.statusCode == 200) {
       final jsonBody = json.decode(response.body);
@@ -19,10 +16,5 @@ class WeatherApi {
     } else {
       throw Exception('Failed to load weather data');
     }
-  } catch (e) {
-    print('API Error: $e');
-    throw Exception('Failed to fetch weather: $e');
   }
-}
-
 }
