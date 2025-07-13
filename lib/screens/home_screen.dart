@@ -93,65 +93,67 @@ class _HomeScreenState extends State<HomeScreen> {
               // ✅ Weather Display
               else if (_weather != null)
                 Expanded(
-                  child: Column(
-                    children: [
-                      // 🌤️ Weather Animation
-                      Lottie.asset(
-                        getAnimationForWeather(_weather!.icon),
-                        height: 160,
-                        repeat: true,
-                        fit: BoxFit.cover,
-                      ),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        // 🌤️ Weather Animation
+                        Lottie.asset(
+                          getAnimationForWeather(_weather!.icon),
+                          height: 160,
+                          repeat: true,
+                          fit: BoxFit.cover,
+                        ),
 
-                      Text(
-                        _weather!.cityName,
-                        style: const TextStyle(
-                          fontSize: 32,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
+                        Text(
+                          _weather!.cityName,
+                          style: const TextStyle(
+                            fontSize: 32,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
                         ),
-                      ),
-                      const SizedBox(height: 8),
-                      Text(
-                        '${_weather!.temperature.toStringAsFixed(1)}°C',
-                        style: const TextStyle(
-                          fontSize: 48,
-                          color: Colors.white,
+                        const SizedBox(height: 8),
+                        Text(
+                          '${_weather!.temperature.toStringAsFixed(1)}°C',
+                          style: const TextStyle(
+                            fontSize: 48,
+                            color: Colors.white,
+                          ),
                         ),
-                      ),
-                      Text(
-                        _weather!.description,
-                        style: const TextStyle(
-                          fontSize: 20,
-                          fontStyle: FontStyle.italic,
-                          color: Colors.white70,
+                        Text(
+                          _weather!.description,
+                          style: const TextStyle(
+                            fontSize: 20,
+                            fontStyle: FontStyle.italic,
+                            color: Colors.white70,
+                          ),
                         ),
-                      ),
-                      const SizedBox(height: 16),
+                        const SizedBox(height: 16),
 
-                      const SizedBox(height: 30),
+                        const SizedBox(height: 30),
 
-                      // 🧊 Weather Glass Cards
-                      SizedBox(
-                        height: 180,
-                        child: ListView.builder(
-                          scrollDirection: Axis.horizontal,
-                          itemCount: 3,
-                          itemBuilder: (context, index) {
-                            return GlassCard(
-                              day: [
-                                'Yesterday',
-                                '2 Days Ago',
-                                '3 Days Ago'
-                              ][index],
-                              temperature:
-                                  '${(_weather!.temperature - (index + 1) * 2).toStringAsFixed(1)}°C',
-                              icon: getFakePastIcon(index),
-                            );
-                          },
+                        // 🧊 Weather Glass Cards
+                        SizedBox(
+                          height: 180,
+                          child: ListView.builder(
+                            scrollDirection: Axis.horizontal,
+                            itemCount: 3,
+                            itemBuilder: (context, index) {
+                              return GlassCard(
+                                day: [
+                                  'Yesterday',
+                                  '2 Days Ago',
+                                  '3 Days Ago'
+                                ][index],
+                                temperature:
+                                    '${(_weather!.temperature - (index + 1) * 2).toStringAsFixed(1)}°C',
+                                icon: getFakePastIcon(index),
+                              );
+                            },
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
             ],

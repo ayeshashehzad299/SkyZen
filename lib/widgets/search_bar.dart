@@ -20,15 +20,22 @@ class CustomSearchBar extends StatelessWidget {
           child: TextField(
             controller: controller,
             focusNode: focusNode,
+            cursorColor: Colors.grey,
             decoration: InputDecoration(
-              hintText: 'Search city...',
-              filled: true,
-              fillColor: Colors.white.withOpacity(0.1),
-              hintStyle: TextStyle(color: Colors.white70),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(12),
-              ),
-            ),
+                hintText: 'Search City...',
+                filled: true,
+                fillColor: Colors.white.withOpacity(0.1),
+                hintStyle: TextStyle(color: Colors.white70),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                  borderSide: BorderSide(color: Colors.grey),
+                ),
+                focusedBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: BorderSide(color: Colors.grey, width: 1.5))),
             style: TextStyle(color: Colors.white),
             onSubmitted: (_) => onSearch(),
           ),
