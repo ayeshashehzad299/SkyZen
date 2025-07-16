@@ -1,14 +1,48 @@
-# SkyZen
+# 🌤️ SkyZen - Weather Forecast App
 
-SkyZen is a sleek, modern Flutter weather app that delivers real-time weather data in a calm, minimalist interface. It features a responsive UI, custom fonts, and support for local assets. Built to provide users with a peaceful way to check the sky — anytime, anywhere.
+SkyZen is a sleek and minimalistic weather app built using **Flutter**, providing real-time weather updates with animations and intuitive UI.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 📸 Screenshots
 
-A few resources to get you started:
+### 🚀 Splash Screen
+![Splash](screenshots/splash_screen.jpg)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 🔄 Loading Screen
+![Loading](screenshots/loading_screen.jpg)
 
-For help getting started with Flutter development, view the [online documentation](https://docs.flutter.dev/).
+### 🏙️ Home Screen
+![Home](screenshots/home_screen.jpg)
+
+---
+
+## 🔧 Features
+
+- 🌍 Search weather by city name
+- 🌦️ Real-time weather updates
+- 💫 Beautiful Lottie animations based on weather type
+- 📅 Simulated past 3-day weather preview
+- ❄️ Frosted glass UI design for cards
+- 🌓 Dark theme for a modern feel
+
+---
+
+## 📱 Tech Stack
+
+- **Flutter**
+- **OpenWeatherMap API**
+- **Lottie animations**
+- **GitHub for version control**
+
+---
+
+## 📦 Installation
+
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+flutter pub get
+flutter run
+
