@@ -133,23 +133,26 @@ class _HomeScreenState extends State<HomeScreen> {
                         const SizedBox(height: 30),
 
                         // 🧊 Weather Glass Cards
-                        SizedBox(
-                          height: 180,
-                          child: ListView.builder(
-                            scrollDirection: Axis.horizontal,
-                            itemCount: 3,
-                            itemBuilder: (context, index) {
-                              return GlassCard(
-                                day: [
-                                  'Yesterday',
-                                  '2 Days Ago',
-                                  '3 Days Ago'
-                                ][index],
-                                temperature:
-                                    '${(_weather!.temperature - (index + 1) * 2).toStringAsFixed(1)}°C',
-                                icon: getFakePastIcon(index),
-                              );
-                            },
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 12),
+                          child: SizedBox(
+                            height: 180,
+                            child: ListView.builder(
+                              scrollDirection: Axis.horizontal,
+                              itemCount: 3,
+                              itemBuilder: (context, index) {
+                                return GlassCard(
+                                  day: [
+                                    'Yesterday',
+                                    '2 Days Ago',
+                                    '3 Days Ago'
+                                  ][index],
+                                  temperature:
+                                      '${(_weather!.temperature - (index + 1) * 2).toStringAsFixed(1)}°C',
+                                  icon: getFakePastIcon(index),
+                                );
+                              },
+                            ),
                           ),
                         ),
                       ],
