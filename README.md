@@ -7,12 +7,15 @@ SkyZen is a sleek and minimalistic weather app built using **Flutter**, providin
 ## 📸 Screenshots
 
 ### 🚀 Splash Screen
+
 ![Splash](screenshots/splash_screen.jpg)
 
 ### 🔄 Loading Screen
+
 ![Loading](screenshots/loading_screen.jpg)
 
 ### 🏙️ Home Screen
+
 ![Home](screenshots/home_screen.jpg)
 
 ---
@@ -39,10 +42,10 @@ SkyZen is a sleek and minimalistic weather app built using **Flutter**, providin
 
 ## 📦 Installation
 
-
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/ayeshashehzad299/SkyZen.git
+cd SkyZen
 flutter pub get
 flutter run
 
+```
